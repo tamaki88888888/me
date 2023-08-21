@@ -10,27 +10,7 @@ interface Props {}
  * @todo レイアウト整える
  */
 const Background: React.FC<Props> = () => {
-  return (
-    <div
-      className={clsx([
-        "flex",
-        "justify-between",
-        "items-center",
-        "h-[200px]",
-        "p-5",
-      ])}
-    >
-      <LogoIcon href="" src="" />
-
-      <div className={"flex "}>
-        <a href="/about">// about</a>
-        <a href="/experience">// experience</a>
-        <a href="/works">// works</a>
-        <a href="/notes">// notes</a>
-        <a href="/contact">// contact</a>
-      </div>
-    </div>
-  );
+  return <div>Background</div>;
 };
 
 export default Background;
