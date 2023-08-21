@@ -4,7 +4,9 @@ import clsx from "../../../../../node_modules/clsx/clsx";
 
 interface Props {}
 /**
- * @memo ヘッダー
+ * @description ヘッダー
+ * @todo アイコンのhref src 持ってくる
+ * @todo レイアウト整える
  */
 const Header: React.FC<Props> = () => {
   return (
