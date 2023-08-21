@@ -1,6 +1,3 @@
-import Header from "@/components/domain-components/SnsIconGloup/Header/index";
-import SnsIconGloup from "@/components/domain-components/SnsIconGloup/index";
-import Background from "@/components/ui-components/Background/index";
 import Layout from "./Layout/index";
 
 /**

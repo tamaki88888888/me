@@ -1,4 +1,6 @@
 import React from "react";
+import clsx from "../../../../node_modules/clsx/clsx";
+
 import LogoIcon from "../LogoIcon/index";
 
 interface Props {}
@@ -9,9 +11,18 @@ interface Props {}
  */
 const Background: React.FC<Props> = () => {
   return (
-    <div className={"flex"}>
+    <div
+      className={clsx([
+        "flex",
+        "justify-between",
+        "items-center",
+        "h-[200px]",
+        "p-5",
+      ])}
+    >
       <LogoIcon href="" src="" />
-      <div className={"flex"}>
+
+      <div className={"flex "}>
         <a href="/about">// about</a>
         <a href="/experience">// experience</a>
         <a href="/works">// works</a>
