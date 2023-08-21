@@ -1,3 +1,9 @@
+import Layout from "../Layout/index";
+
 export default function Home() {
-  return <div>about</div>;
+  return (
+    <Layout>
+      <div>about</div>
+    </Layout>
+  );
 }

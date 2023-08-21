@@ -1,3 +1,9 @@
+import Layout from "../Layout/index";
+
 export default function Home() {
-  return <div>experience</div>;
+  return (
+    <Layout>
+      <div>experience</div>
+    </Layout>
+  );
 }
