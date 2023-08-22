@@ -1,6 +1,6 @@
 import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
-import clsx from "../../../../../node_modules/clsx/clsx";
+import clsx from "clsx"; // node_module内にあるものをパス指定しようとしても vscodeが解決してくれないみたいなので、模索中
 
 interface Props {}
 /**
