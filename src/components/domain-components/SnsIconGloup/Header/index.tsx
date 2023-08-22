@@ -1,11 +1,35 @@
+import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
+import clsx from "clsx"; // node_module内にあるものをパス指定しようとしても vscodeが解決してくれないみたいなので、模索中
 
 interface Props {}
 /**
- * @memo ヘッダー
+ * @description ヘッダー
+ * @todo アイコンのhref src 持ってくる
+ * @todo レイアウト整える
  */
 const Header: React.FC<Props> = () => {
-  return <>Header</>;
+  return (
+    <div
+      className={clsx([
+        "flex",
+        "justify-between",
+        "items-center",
+        "h-[200px]",
+        "p-5",
+      ])}
+    >
+      <LogoIcon href="" src="" />
+
+      <div className={"flex "}>
+        <a href="/about">// about</a>
+        <a href="/experience">// experience</a>
+        <a href="/works">// works</a>
+        <a href="/notes">// notes</a>
+        <a href="/contact">// contact</a>
+      </div>
+    </div>
+  );
 };
 
 export default Header;
