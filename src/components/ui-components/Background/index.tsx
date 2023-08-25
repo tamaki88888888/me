@@ -8,10 +8,14 @@ interface Props {}
 const Background: React.FC<Props> = () => {
   return (
     <div
-      className={clsx("absolute", "h-screen", "w-full", "custom-background")}
-    >
-      Background
-    </div>
+      className={clsx(
+        "absolute",
+        "h-screen",
+        "w-full",
+        "custom-background",
+        "-z-10"
+      )}
+    />
   );
 };
 
