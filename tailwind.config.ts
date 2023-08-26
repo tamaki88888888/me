@@ -13,6 +13,20 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      animation: {
+        "rotate-center":
+          "rotate-center 2s cubic-bezier(0.45, 0.44, 0.44, 0.42) infinite",
+      },
+      keyframes: {
+        "rotate-center": {
+          from: {
+            transform: "rotate(0)",
+          },
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
     },
   },
   plugins: [],

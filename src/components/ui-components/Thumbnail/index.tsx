@@ -25,7 +25,7 @@ const Thumbnail: React.FC<Props> = ({ src }) => {
       </div>
 
       {/* インスタっぽいリング */}
-      <div className={clsx("absolute", "top-0")}>
+      <div className={clsx("absolute", "top-0", "animate-rotate-center")}>
         <Image
           className={"rounded-full"}
           src={"/svg/color-ring.svg"}
