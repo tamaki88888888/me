@@ -1,5 +1,4 @@
 import Header from "@/components/domain-components/SnsIconGloup/Header/index";
-import SnsIconGloup from "@/components/domain-components/SnsIconGloup/index";
 import Background from "@/components/ui-components/Background/index";
 
 interface Props {
@@ -13,7 +12,6 @@ const Layout: React.FC<Props> = ({ children }) => {
     <div>
       <Background />
       <Header />
-      <SnsIconGloup flexDirection="column" />
       {children}
     </div>
   );

@@ -17,7 +17,7 @@ const Header: React.FC<Props> = () => {
           ["h-[200px]", "w-[720px]"]
         )}
       >
-        <LogoIcon href="" src="/svg/Logo.svg" />
+        <LogoIcon href="/" src="/svg/Logo.svg" />
 
         <div className={"flex gap-x-10"}>
           <a href="/about">// about</a>
