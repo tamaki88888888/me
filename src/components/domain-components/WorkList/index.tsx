@@ -15,7 +15,7 @@ const WorkList: React.FC<Props> = () => {
     <>
       <div className={clsx(["flex", "justify-center", "flex-wrap", "gap-10"])}>
         {projectList.map((project) => (
-          <WorkCard project={project} />
+          <WorkCard {...project} />
         ))}
         <div className={"w-[300px] h-[300px]"} />
       </div>

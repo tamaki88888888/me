@@ -50,7 +50,7 @@ export const PROJECTS: { [K in string]: Project } = {
   AKITSU: {
     shouldShow: true,
     name: "秋津道路株式会社コーポレートサイト",
-    thumbnail: "",
+    thumbnail: "/image/thumbnail1.png",
     href: "https://akitsudoro.com/",
     detail: `秋津道路株式会社のコーポーレートサイト`,
     skill: "WordPrss Sass",
@@ -58,7 +58,7 @@ export const PROJECTS: { [K in string]: Project } = {
   PORTFOLIO: {
     shouldShow: true,
     name: "ko - introduce",
-    thumbnail: "",
+    thumbnail: "/image/thumbnail1.png",
     href: "",
     detail: "自分の自己紹介サイトです。",
     skill: "TS React Next React-spring",
@@ -66,8 +66,8 @@ export const PROJECTS: { [K in string]: Project } = {
   BLOG: {
     shouldShow: true,
     name: "blog",
-    thumbnail: "",
-    href: "",
+    thumbnail: "/image/thumbnail1.png",
+    href: "https://developer-blog-xi.vercel.app/",
     detail:
       "開発ブログ。今までははてなブログをしようすることが多かったのですが、もっと詳細部分のデザインを変更したくなってしまい。。。自分用に開発いたしました。",
     skill: "TS React Next Netlify",
