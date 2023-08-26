@@ -17,11 +17,12 @@ const Header: React.FC<Props> = () => {
         "items-center",
         "h-[200px]",
         "p-5",
+        "w-[720px]",
       ])}
     >
-      <LogoIcon href="" src="" />
+      <LogoIcon href="" src="/svg/Logo.svg" />
 
-      <div className={"flex "}>
+      <div className={"flex gap-x-10"}>
         <a href="/about">// about</a>
         <a href="/experience">// experience</a>
         <a href="/works">// works</a>

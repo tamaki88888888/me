@@ -13,7 +13,8 @@ const Background: React.FC<Props> = () => {
         "h-screen",
         "w-full",
         "custom-background",
-        "-z-10"
+        "-z-10",
+        "opacity-10"
       )}
     />
   );
