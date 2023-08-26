@@ -1,5 +1,4 @@
 import { EXPERIENCES, SIDE_WORKS } from "@/domain/user/constant";
-import clsx from "clsx";
 import React from "react";
 import ExperienceRowContainer from "./ExperienceRowContainer";
 

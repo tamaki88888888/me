@@ -1,7 +1,5 @@
 import WorkExpeience from "@/components/domain-components/SnsIconGloup/WorkExpeience";
 import PageContainer from "@/components/ui-components/PageContainer/index";
-import Thumbnail from "@/components/ui-components/Thumbnail";
-import { ME } from "@/domain/user/constant";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
 
