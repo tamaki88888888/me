@@ -24,7 +24,9 @@ export default function Home() {
             <h2 className={clsx(["text-3xl"])}>About</h2>
 
             {/* サムネイル */}
-            <Thumbnail src={ME.THUMBNAIL} />
+            <div className={clsx("flex", "justify-center")}>
+              <Thumbnail src={ME.THUMBNAIL} />
+            </div>
 
             {/* 詳細 */}
             <div className={"text-[14px]"}>
