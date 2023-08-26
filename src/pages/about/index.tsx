@@ -4,7 +4,7 @@ import Layout from "../Layout/index";
 
 /**
  * @description ABOUTページ
- * @todo clsxの解消
+ * @todo clsxの解消 - できたのですが、ちゃんと理解できてないため、後学じっし
  */
 export default function Home() {
   return (
