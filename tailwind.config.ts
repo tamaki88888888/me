@@ -15,7 +15,7 @@ const config: Config = {
       },
       animation: {
         "rotate-center":
-          "rotate-center 2s cubic-bezier(0.45, 0.44, 0.44, 0.42) infinite",
+          "rotate-center 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite",
       },
       keyframes: {
         "rotate-center": {
