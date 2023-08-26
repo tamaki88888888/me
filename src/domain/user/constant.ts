@@ -1,3 +1,5 @@
+import { Project } from "./model";
+
 export const ME = {
   NAME: "ko tamaki",
   DETAIL: "hi, im ko tamaki",
@@ -37,3 +39,37 @@ export const SIDE_WORKS = {
     SKILL: "WordPrss Sass",
   },
 };
+
+//よくよく考えたら、そこまで紹介したい記事がなくて草
+export const NOTES = {};
+
+//オブジェクトのキーをキャピタルにするかキャメルケースにするか悩み中。
+//ただ、これはマップするためのものだから小文字でいいかも
+//コンストがあって、型にコンストを依存させるべきか、型が先なのかがわからない
+export const PROJECTS: { [K in string]: Project } = {
+  AKITSU: {
+    shouldShow: true,
+    name: "秋津道路株式会社コーポレートサイト",
+    thumbnail: "",
+    href: "https://akitsudoro.com/",
+    detail: `秋津道路株式会社のコーポーレートサイト`,
+    skill: "WordPrss Sass",
+  },
+  PORTFOLIO: {
+    shouldShow: true,
+    name: "ko - introduce",
+    thumbnail: "",
+    href: "",
+    detail: "自分の自己紹介サイトです。",
+    skill: "TS React Next React-spring",
+  },
+  BLOG: {
+    shouldShow: true,
+    name: "blog",
+    thumbnail: "",
+    href: "",
+    detail:
+      "開発ブログ。今までははてなブログをしようすることが多かったのですが、もっと詳細部分のデザインを変更したくなってしまい。。。自分用に開発いたしました。",
+    skill: "TS React Next Netlify",
+  },
+} as const;
