@@ -1,9 +1,8 @@
-import { Me } from "./model";
-
-export const me: Me = {
-  name: "ko tamaki",
-  detail: "hi, im ko tamaki",
-};
+export const ME = {
+  NAME: "ko tamaki",
+  DETAIL: "hi, im ko tamaki",
+  THUMBNAIL: "/image/thumbnail2.png", // pathは含めない方がいのかな
+} as const;
 
 export const SNS = {
   INSTAGRAM: { URL: "https://www.instagram.com/koutamakiii" },

@@ -19,7 +19,8 @@ export default function Home() {
             )}
           >
             {/* タイトル */}
-            <h1 className={clsx(["text-5xl"])}>I'M KO TAMAKI</h1>
+            <h2 className={clsx(["text-5xl"])}>I'M KO TAMAKI</h2>
+
             {/* 詳細 */}
             <div className={"text-[14px]"}>
               <p className={"mb-4"}>
@@ -28,6 +29,7 @@ export default function Home() {
                 I'm frontend engineer and I'm frontend engineer and I'm frontend
                 engineer and
               </p>
+
               <p>
                 I'm frontend engineer and I'm frontend engineer and I'm frontend
                 engineer and I'm frontend engineer and I'm frontend engineer and

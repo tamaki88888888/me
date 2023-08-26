@@ -1,4 +1,6 @@
 import PageContainer from "@/components/ui-components/PageContainer/index";
+import Thumbnail from "@/components/ui-components/Thumbnail";
+import { ME } from "@/domain/user/constant";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
 
@@ -18,8 +20,12 @@ export default function Home() {
               ["text-white", "z-index-10"]
             )}
           >
-            {/* タイトル */}
-            <h1 className={clsx(["text-5xl"])}>I'M KO TAMAKI</h1>
+            {/* 見出し */}
+            <h2 className={clsx(["text-3xl"])}>About</h2>
+
+            {/* サムネイル */}
+            <Thumbnail src={ME.THUMBNAIL} />
+
             {/* 詳細 */}
             <div className={"text-[14px]"}>
               <p className={"mb-4"}>
@@ -28,6 +34,7 @@ export default function Home() {
                 I'm frontend engineer and I'm frontend engineer and I'm frontend
                 engineer and
               </p>
+
               <p>
                 I'm frontend engineer and I'm frontend engineer and I'm frontend
                 engineer and I'm frontend engineer and I'm frontend engineer and
