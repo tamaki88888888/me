@@ -9,12 +9,9 @@ const Background: React.FC<Props> = () => {
   return (
     <div
       className={clsx(
-        "absolute",
-        "h-screen",
-        "w-full",
-        "custom-background",
-        "-z-10",
-        "opacity-10"
+        ["absolute", "-z-10"],
+        ["h-screen", "w-full"],
+        ["custom-background", "opacity-10"]
       )}
     />
   );

@@ -14,7 +14,7 @@ const Header: React.FC<Props> = () => {
       <div
         className={clsx(
           ["flex", "justify-between", "items-center"],
-          ["h-[200px]", "p-5", "w-[720px]"]
+          ["h-[200px]", "w-[720px]"]
         )}
       >
         <LogoIcon href="" src="/svg/Logo.svg" />
