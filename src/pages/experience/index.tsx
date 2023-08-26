@@ -25,21 +25,7 @@ export default function Home() {
 
             {/* 詳細 */}
             <WorkExpeience />
-            <div className={"text-[14px]"}>
-              <p className={"mb-4"}>
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and I'm frontend engineer and I'm frontend engineer and
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and
-              </p>
 
-              <p>
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and I'm frontend engineer and I'm frontend engineer and
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and
-              </p>
-            </div>
             {/* 次のページ */}
             <a href="/works">what's next ? click ! →</a>
           </div>
