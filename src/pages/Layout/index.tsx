@@ -13,7 +13,7 @@ const Layout: React.FC<Props> = ({ children }) => {
     <div>
       <Background />
       <Header />
-      <SnsIconGloup />
+      <SnsIconGloup flexDirection="column" />
       {children}
     </div>
   );
