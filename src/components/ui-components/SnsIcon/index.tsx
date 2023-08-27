@@ -11,7 +11,7 @@ interface Props {
  */
 const SnsIcon: React.FC<Props> = ({ href, src }) => {
   return (
-    <a href={href}>
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <Image src={src} alt={"logo"} width={20} height={20} />
     </a>
   );

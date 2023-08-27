@@ -1,6 +1,6 @@
 import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
-import clsx from "clsx"; // node_module内にあるものをパス指定しようとしても vscodeが解決してくれないみたいなので、模索中
+import clsx from "clsx";
 
 interface Props {}
 /**
@@ -19,10 +19,13 @@ const Header: React.FC<Props> = () => {
         <LogoIcon href="/" src="/svg/Logo.svg" />
 
         <div className={"flex gap-x-10"}>
-          <a href="/about">// about</a>
-          <a href="/experience">// experience</a>
-          <a href="/works">// works</a>
-          <a href="/contact">// contact</a>
+          <a href="/about">About</a>
+          <a href="/experience">Experience</a>
+          <a href="/work">Work</a>
+          <a href="/contact">Contact</a>
+          <a href="/#" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
         </div>
       </div>
     </div>

@@ -7,13 +7,16 @@ interface Props {}
  */
 const Background: React.FC<Props> = () => {
   return (
-    <div
-      className={clsx(
-        ["absolute", "-z-10"],
-        ["h-screen", "w-full"],
-        ["custom-background", "opacity-10"]
-      )}
-    />
+    <div>
+      <div
+        className={clsx(
+          ["absolute", "-z-10"],
+          ["h-screen", "w-full"],
+          ["custom-background"]
+        )}
+      />
+      <div className={"background-border"} />
+    </div>
   );
 };
 

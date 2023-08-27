@@ -9,7 +9,8 @@ export const ME = {
 export const SNS = {
   INSTAGRAM: { URL: "https://www.instagram.com/koutamakiii" },
   GITHUB: { URL: "https://github.com/tamaki88888888" },
-  X: { URL: "https://twitter.com/koukoukokoko" },
+  X: { URL: "https://x.com/koukoukokoko" },
+  MY_BLOG: { URL: "https://developer-blog-xi.vercel.app/" },
 };
 
 //定数なんだけどマップした時にめちゃめちゃ違和感ある

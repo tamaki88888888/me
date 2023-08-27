@@ -14,6 +14,7 @@ const SNS_ICON_PROP_LIST: Array<React.ComponentProps<typeof SnsIcon>> = [
     src: "/svg/instagram-icon.svg",
   },
   { href: SNS.X.URL, src: "/svg/twitter-icon.svg" },
+  { href: SNS.MY_BLOG.URL, src: "/svg/clip-icon.svg" },
 ];
 
 /**
