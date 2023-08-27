@@ -1,5 +1,4 @@
 import NoteList from "@/components/domain-components/NoteList";
-import WorkExpeience from "@/components/domain-components/SnsIconGloup/WorkExpeience";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
