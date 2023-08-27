@@ -30,7 +30,7 @@ const SnsIconGloup: React.FC<Props> = ({ flexDirection }) => {
       ])}
     >
       {SNS_ICON_PROP_LIST.map(({ href, src }) => (
-        <SnsIcon href={href} src={src} />
+        <SnsIcon key={href} href={href} src={src} />
       ))}
     </div>
   );
