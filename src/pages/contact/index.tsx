@@ -33,6 +33,8 @@ export default function Home() {
               ここに影響を受けた本とか書きたい。
             </div>
 
+            <a href="mailto:">get in touch !!</a>
+
             {/* 次のページ */}
           </div>
         </PageContainer>
