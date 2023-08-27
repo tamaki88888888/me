@@ -1,10 +1,9 @@
-import NoteList from "@/components/domain-components/NoteList";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
 
 /**
- * @description NOTESページ
+ * @description CONTACTページ
  */
 export default function Home() {
   return (
@@ -33,7 +32,7 @@ export default function Home() {
               ここに影響を受けた本とか書きたい。
             </div>
 
-            <a href="mailto:">get in touch !!</a>
+            <a href="mailto:koukoukokoko512@gmail.com">get in touch !!</a>
 
             {/* 次のページ */}
           </div>

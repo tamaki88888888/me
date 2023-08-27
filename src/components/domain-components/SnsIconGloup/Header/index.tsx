@@ -5,8 +5,7 @@ import clsx from "clsx"; // node_module内にあるものをパス指定しよ�
 interface Props {}
 /**
  * @description ヘッダー
- * @todo アイコンのhref src 持ってくる
- * @todo レイアウト整える
+ * @todo もし共有したい記事が増えてきたら、notesページへのリンク先を追加する
  */
 const Header: React.FC<Props> = () => {
   return (
@@ -23,7 +22,6 @@ const Header: React.FC<Props> = () => {
           <a href="/about">// about</a>
           <a href="/experience">// experience</a>
           <a href="/works">// works</a>
-          <a href="/notes">// notes</a>
           <a href="/contact">// contact</a>
         </div>
       </div>
