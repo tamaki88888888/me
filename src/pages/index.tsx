@@ -1,3 +1,4 @@
+import Footer from "@/components/domain-components/Footer";
 import SnsIconGloup from "@/components/domain-components/SnsIconGloup/index";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import clsx from "clsx";
@@ -8,11 +9,9 @@ const title = "@koukoukokoko";
 
 /**
  * @description TOPページ
- * @todo typing animation
- * @todo fix layout to unrelated about header style
+ * @todo creator cursor with focusing arrow and open link with enter
  * @todo watch this link and make typing abnimation more beautiful
  * @link https://www.youtube.com/watch?v=N4899I-tAW4
- * @todo creator cursor with focusing arrow and open link with enter
  */
 export default function Home() {
   const [typeTitle, setTypeTitle] = useState("");
@@ -29,36 +28,42 @@ export default function Home() {
 
   return (
     <div>
-      <div className={"h-[200px]"} />
+      <Footer />
       <Layout>
         {/* コンテナーの役割 */}
         <PageContainer>
           <div
-            className={clsx(
-              ["flex", "flex-col", "gap-y-4"],
-              ["text-white", "z-index-10"]
-            )}
+            className={clsx("h-screen", [
+              "flex",
+              "items-center",
+              "justify-center",
+            ])}
           >
-            {/* タイトル */}
-            <h2
-              className={clsx(["text-2xl", "text-center", "blinking-cursor"])}
-            >
-              {typeTitle}
-            </h2>
-
             <div
-              className={clsx("text-[14px]", "w-[70px]", "m-auto", [
-                "flex",
-                "flex-col",
-                "gap-y-4",
-              ])}
+              className={clsx(
+                ["flex", "flex-col", "gap-y-8"],
+                ["text-white", "z-index-10"]
+              )}
             >
-              <a href="/about">about</a>
-              <a href="/work">work</a>
-              <a href="/resume">resume</a>
+              {/* タイトル */}
+              <h2
+                className={clsx(["text-2xl", "text-center", "blinking-cursor"])}
+              >
+                {typeTitle}
+              </h2>
+
+              <div
+                className={clsx("text-[14px]", "w-[70px]", "m-auto", [
+                  "flex",
+                  "flex-col",
+                  "gap-y-4",
+                ])}
+              >
+                <a href="/about">about</a>
+                <a href="/work">work</a>
+                <a href="/resume">resume</a>
+              </div>
             </div>
-            {/* SNS */}
-            <SnsIconGloup />
           </div>
         </PageContainer>
       </Layout>
