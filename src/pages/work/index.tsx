@@ -1,4 +1,4 @@
-import Header from "@/components/domain-components/SnsIconGloup/Header";
+import Header from "@/components/domain-components/Header";
 import WorkList from "@/components/domain-components/WorkList";
 import PageContainer from "@/components/ui-components/PageContainer";
 import clsx from "clsx";

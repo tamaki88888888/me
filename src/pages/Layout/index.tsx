@@ -1,4 +1,4 @@
-import Header from "@/components/domain-components/SnsIconGloup/Header/index";
+import Header from "@/components/domain-components/Header/index";
 import Background from "@/components/ui-components/Background/index";
 
 interface Props {

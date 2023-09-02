@@ -1,4 +1,4 @@
-import Header from "@/components/domain-components/SnsIconGloup/Header";
+import Header from "@/components/domain-components/Header";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import Thumbnail from "@/components/ui-components/Thumbnail";
 import { ME } from "@/domain/user/constant";
