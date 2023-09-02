@@ -6,7 +6,6 @@ import { AppProps } from "../../node_modules/next/app";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      {/* <CursorChaser title="string" /> */}
       <MouseStalker />
       <Component {...pageProps} />
     </>

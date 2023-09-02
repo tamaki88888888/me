@@ -1,3 +1,4 @@
+import Header from "@/components/domain-components/SnsIconGloup/Header";
 import SnsIconGloup from "@/components/domain-components/SnsIconGloup/index";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import clsx from "clsx";
@@ -5,6 +6,8 @@ import Layout from "./Layout/index";
 
 /**
  * @description TOPページ
+ * @todo typing animation
+ * @todo fix layout to unrelated about header style
  */
 export default function Home() {
   return (
@@ -19,26 +22,22 @@ export default function Home() {
             )}
           >
             {/* タイトル */}
-            <h2 className={clsx(["text-5xl"])}>I'M KO TAMAKI</h2>
+            <h2 className={clsx(["text-2xl", "text-center"])}>
+              @koukoukokoko_
+            </h2>
 
             {/* 詳細 */}
-            <div className={"text-[14px]"}>
-              <p className={"mb-4"}>
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and I'm frontend engineer and I'm frontend engineer and
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and
-              </p>
-
-              <p>
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and I'm frontend engineer and I'm frontend engineer and
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and
-              </p>
+            <div
+              className={clsx("text-[14px]", "w-[70px]", "m-auto", [
+                "flex",
+                "flex-col",
+                "gap-y-4",
+              ])}
+            >
+              <a href="/about">about</a>
+              <a href="/work">work</a>
+              <a href="/resume">resume</a>
             </div>
-            {/* 次のページ */}
-            <a href="/about">see and more about me →</a>
             {/* SNS */}
             <SnsIconGloup />
           </div>
