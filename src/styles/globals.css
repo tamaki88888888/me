@@ -91,3 +91,17 @@ body {
   transition-timing-function: ease-out;
   z-index: 999;
 }
+
+@layer components {
+  .blinking-cursor:after {
+    content: "_";
+    /* @apply text-secondary-300; */
+    animation: blink 1s step-start infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+}

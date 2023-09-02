@@ -22,8 +22,10 @@ export default function Home() {
             )}
           >
             {/* タイトル */}
-            <h2 className={clsx(["text-2xl", "text-center"])}>
-              @koukoukokoko_
+            <h2
+              className={clsx(["text-2xl", "text-center", "blinking-cursor"])}
+            >
+              @koukoukokoko
             </h2>
 
             {/* 詳細 */}
