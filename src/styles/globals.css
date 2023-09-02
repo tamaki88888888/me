@@ -60,3 +60,34 @@ body {
     linear-gradient(to right, currentcolor 1px, transparent 1px) transparent;
   transition: all 0.5s linear 0s;
 }
+
+#stalker {
+  pointer-events: none;
+  position: fixed;
+  top: -4px;
+  left: -4px;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.2s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
+
+#stalker2 {
+  pointer-events: none;
+  position: fixed;
+  top: -48px;
+  left: -48px;
+  width: 96px;
+  height: 96px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  transform: translate(0, 0);
+  transition: transform 0.5s;
+  transition-timing-function: ease-out;
+  z-index: 999;
+}
