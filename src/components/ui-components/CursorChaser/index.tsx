@@ -5,7 +5,8 @@ interface Props {
 }
 
 /**
- * @memo カーソルに追従させるUIコンポーネント
+ * @deprecated というか学習用コンポーネントなので、cursorchaserreactspringを使う。
+ * @todo 削除 or studyディレクトリに移動
  */
 const CursorChaser: React.FC<Props> = () => {
   useEffect(() => {
