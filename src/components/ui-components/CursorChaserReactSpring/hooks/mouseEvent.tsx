@@ -96,7 +96,7 @@ const useMouseOver = (
         element.removeEventListener("mouseover", listener);
       });
     };
-  }, []);
+  }, [initMouse, setSpringStyles, times, tag]);
 };
 
 /**
@@ -134,7 +134,7 @@ const useMouseOut = (
      * @description ③DOM要素に対してイベントリスナーを登録
      */
     elements.forEach((element) => {
-      element.addEventListener("mouseover", listener);
+      element.addEventListener("mouseout", listener);
     });
 
     /**
@@ -142,10 +142,10 @@ const useMouseOut = (
      */
     return () => {
       elements.forEach((element) => {
-        element.removeEventListener("mouseover", listener);
+        element.removeEventListener("mouseout", listener);
       });
     };
-  }, []);
+  }, [initMouse, setSpringStyles, times, tag]);
 };
 
 export { useMouseMove, useMouseOver, useMouseOut };

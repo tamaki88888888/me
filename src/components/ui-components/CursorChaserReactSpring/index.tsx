@@ -31,7 +31,7 @@ const mouseStyles: CSSProperties = {
  * @description 最終的にやってることは、react-springが提供しているコンポーネントに、styleを渡すだけ
  */
 const MouseStalker: FC = () => {
-  const springStyles = useMouseStalker(initMouse, springConfig, 5);
+  const springStyles = useMouseStalker(initMouse, springConfig, 6);
 
   return (
     <animated.div

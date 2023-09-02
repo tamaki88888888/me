@@ -29,8 +29,7 @@ const useMouseStalker = (
     config: mouseConfig,
   }));
 
-  //listnerMouseMove とかが正しくない？
-  useMouseMove(initMouse, setSpringStyles, 2);
+  useMouseMove(initMouse, setSpringStyles, titmes);
   useMouseOver(initMouse, setSpringStyles, titmes, "a");
   useMouseOut(initMouse, setSpringStyles, titmes, "a");
 
