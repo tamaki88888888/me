@@ -11,6 +11,7 @@ const CursorChaser: React.FC<Props> = () => {
   useEffect(() => {
     //マウスストーカー用のdivを取得
     const stalker = document.getElementById("stalker");
+    const stalker2 = document.getElementById("stalker2");
 
     //上記のdivタグをマウスに追従させる処理
     document.addEventListener("mousemove", function (e) {
@@ -18,13 +19,6 @@ const CursorChaser: React.FC<Props> = () => {
         stalker.style.transform =
           "translate(" + e.clientX + "px, " + e.clientY + "px)";
       }
-    });
-
-    //マウスストーカー用のdivを取得
-    const stalker2 = document.getElementById("stalker2");
-
-    //上記のdivタグをマウスに追従させる処理
-    document.addEventListener("mousemove", function (e) {
       if (stalker2) {
         stalker2.style.transform =
           "translate(" + e.clientX + "px, " + e.clientY + "px)";
