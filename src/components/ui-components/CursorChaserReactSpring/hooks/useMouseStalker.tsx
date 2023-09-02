@@ -1,6 +1,6 @@
 import { useSpring } from "react-spring";
 //useSpringはより複雑な動きを表現することに使える
-import { Mouse, useMouseMove } from "./mouseEvent";
+import { Mouse, useMouseMove, useMouseOut, useMouseOver } from "./mouseEvent";
 
 /**
  * @description ??
@@ -19,7 +19,11 @@ export type SpringConfig = {
  * @param mouseConfig
  * @returns
  */
-const useMouseStalker = (initMouse: Mouse, mouseConfig: SpringConfig) => {
+const useMouseStalker = (
+  initMouse: Mouse,
+  mouseConfig: SpringConfig,
+  titmes: number
+) => {
   const [springStyles, setSpringStyles] = useSpring(() => ({
     to: initMouse,
     config: mouseConfig,
@@ -27,6 +31,8 @@ const useMouseStalker = (initMouse: Mouse, mouseConfig: SpringConfig) => {
 
   //listnerMouseMove とかが正しくない？
   useMouseMove(initMouse, setSpringStyles, 2);
+  useMouseOver(initMouse, setSpringStyles, titmes, "a");
+  useMouseOut(initMouse, setSpringStyles, titmes, "a");
 
   return springStyles;
 };
