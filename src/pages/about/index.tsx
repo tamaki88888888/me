@@ -1,3 +1,4 @@
+import Header from "@/components/domain-components/SnsIconGloup/Header";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import Thumbnail from "@/components/ui-components/Thumbnail";
 import { ME } from "@/domain/user/constant";
@@ -11,6 +12,7 @@ import Layout from "../Layout/index";
 export default function Home() {
   return (
     <div>
+      <Header />
       <Layout>
         {/* コンテナーの役割 */}
         <PageContainer>
