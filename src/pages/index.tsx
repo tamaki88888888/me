@@ -47,7 +47,11 @@ export default function Home() {
             >
               {/* タイトル */}
               <h2
-                className={clsx(["text-2xl", "text-center", "blinking-cursor"])}
+                className={clsx([
+                  "tracking-[4px]",
+                  "text-center",
+                  "blinking-cursor",
+                ])}
               >
                 {typeTitle}
               </h2>
@@ -59,9 +63,15 @@ export default function Home() {
                   "gap-y-4",
                 ])}
               >
-                <a href="/about">about</a>
-                <a href="/work">work</a>
-                <a href="/resume">resume</a>
+                <a href="/about" className={"hover:underline"}>
+                  about
+                </a>
+                <a href="/work" className={"hover:underline"}>
+                  work
+                </a>
+                <a href="/resume" className={"hover:underline"}>
+                  resume
+                </a>
               </div>
             </div>
           </div>

@@ -1,4 +1,3 @@
-import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
 import clsx from "clsx";
 import SnsIconGloup from "../SnsIconGloup";

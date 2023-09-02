@@ -33,22 +33,55 @@ export default function Home() {
             {/* 詳細 */}
             <div className={"text-[14px]"}>
               <p className={"mb-4"}>
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and I'm frontend engineer and I'm frontend engineer and
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and
+                <p>はじめまして、こうです</p>
+                <p>
+                  思いついたものや真似したいものはとにかく作ってみる人です。
+                  ピザとドクターペッパーがすきです。
+                </p>
               </p>
 
-              <p>
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and I'm frontend engineer and I'm frontend engineer and
-                I'm frontend engineer and I'm frontend engineer and I'm frontend
-                engineer and
+              <p className={"mb-4"}>
+                <p>好きなピザ</p>
+                <p>ミモザの木さんの小谷ピザ</p>
+              </p>
+
+              <p className={"mb-4"}>
+                <p>ハマってること</p>
+                <p>
+                  とあるスマホゲーム(
+                  <a
+                    href="https://supercell.com/en/games/brawlstars/"
+                    target={"_blank"}
+                  >
+                    ブロスタ
+                  </a>
+                  )
+                </p>
+              </p>
+
+              <p className={"mb-4"}>
+                <p>開発環境など</p>
+                <p>エディタ：vscode / ブラウザ：Arc / ターミナル：wrap</p>
+              </p>
+
+              <p className={"mb-4"}>
+                <p>業務で関わることが多い</p>
+                <p>
+                  React / Next.js / Recoil / CSS / react-hook-form / Tailwind
+                  CSS / Perl / WordPress
+                </p>
+              </p>
+
+              <p className={"mb-4"}>
+                <p>挨拶はした</p>
+                <p>Redux / Ruby / Babel</p>
+              </p>
+
+              <p className={"mb-4"}>
+                <p>今身に付けたいこと</p>
+                <p>Go / react-spring</p>
               </p>
             </div>
-            {/* 次のページ */}
-            <a href="/about">see and more about me →</a>
-            {/* SNS */}
           </div>
         </PageContainer>
       </Layout>
