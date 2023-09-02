@@ -26,7 +26,7 @@ const useMouseStalker = (initMouse: Mouse, mouseConfig: SpringConfig) => {
   }));
 
   //listnerMouseMove とかが正しくない？
-  useMouseMove(initMouse, setSpringStyles);
+  useMouseMove(initMouse, setSpringStyles, 2);
 
   return springStyles;
 };
