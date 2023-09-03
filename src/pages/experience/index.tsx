@@ -13,7 +13,8 @@ export default function Home() {
           <div
             className={clsx(
               ["flex", "flex-col", "gap-y-4"],
-              ["text-white", "z-index-10"]
+              "text-white",
+              "pb-[100px]"
             )}
           >
             <h2 className={clsx(["text-3xl"])}>Work Experience</h2>

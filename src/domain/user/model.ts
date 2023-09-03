@@ -4,10 +4,11 @@ export interface Me {
 }
 
 export interface Project {
+  during: string;
   shouldShow: boolean;
   name: string;
   thumbnail: string;
   href: string;
-  detail: string;
-  skill: string;
+  detailList: Array<string>;
+  skillList: Array<string>;
 }

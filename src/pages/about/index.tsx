@@ -20,7 +20,8 @@ export default function Home() {
           <div
             className={clsx(
               ["flex", "flex-col", "gap-y-4"],
-              ["text-white", "z-index-10"]
+              ["text-white", "z-index-10"],
+              "pb-[100px]"
             )}
           >
             {/* 見出し */}

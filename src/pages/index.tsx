@@ -40,10 +40,7 @@ export default function Home() {
             ])}
           >
             <div
-              className={clsx(
-                ["flex", "flex-col", "gap-y-8"],
-                ["text-white", "z-index-10"]
-              )}
+              className={clsx(["flex", "flex-col", "gap-y-8"], "text-white")}
             >
               {/* タイトル */}
               <h2

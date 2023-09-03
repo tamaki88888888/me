@@ -57,29 +57,31 @@ export const NOTES = {};
 export const PROJECTS: { [K in string]: Project } = {
   AKITSU: {
     shouldShow: true,
+    during: "2022",
     name: "秋津道路株式会社コーポレートサイト",
     thumbnail: "/image/thumbnail1.png",
     href: "https://akitsudoro.com/",
-    detail: `秋津道路株式会社のコーポーレートサイト`,
-    skill: "WordPrss Sass",
+    detailList: [`秋津道路株式会社のコーポーレートサイト`],
+    skillList: ["WordPrss", "Sass"],
   },
-
   PORTFOLIO: {
+    during: "2023",
     shouldShow: true,
     name: "ko - introduce",
     thumbnail: "/image/thumbnail1.png",
     href: "",
-    detail: "自分の自己紹介サイトです。",
-    skill: "TS React Next React-spring",
+    detailList: ["自分の自己紹介サイトです。"],
+    skillList: ["TS", "React", "Next", "React-spring"],
   },
-
   BLOG: {
+    during: "2022",
     shouldShow: true,
     name: "blog",
     thumbnail: "/image/thumbnail1.png",
     href: "https://developer-blog-xi.vercel.app/",
-    detail:
+    detailList: [
       "開発ブログ。今までははてなブログをしようすることが多かったのですが、もっと詳細部分のデザインを変更したくなってしまい。。。自分用に開発いたしました。",
-    skill: "TS React Next Netlify",
+    ],
+    skillList: ["TS", "React", "Next", "Netlify"],
   },
 };
