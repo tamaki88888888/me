@@ -29,7 +29,6 @@ const Header: React.FC<Props> = () => {
             <a href="/about">About</a>
             <a href="/experience">Experience</a>
             <a href="/work">Work</a>
-            <a href="/contact">Contact</a>
             <a href="/#" target="_blank" rel="noopener noreferrer">
               Resume
             </a>
