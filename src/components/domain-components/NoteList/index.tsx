@@ -1,15 +1,11 @@
 import React from "react";
 
-interface Props {}
 /**
  * @memo Notesページにて、記事情報を表示するためのコンポーネント
+ * @memo 共有したい記事がなく、使ってない
  */
-const NoteList: React.FC<Props> = () => {
-  return (
-    <>
-      <>共有したい記事がたくさん出てきたら後悔しよう！！</>
-    </>
-  );
+const NoteList: React.FC = () => {
+  return <div>未実装</div>;
 };
 
 export default NoteList;

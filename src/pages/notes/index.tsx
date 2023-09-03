@@ -1,4 +1,5 @@
 import NoteList from "@/components/domain-components/NoteList";
+import Header from "@/components/domain-components/Header";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
@@ -9,13 +10,15 @@ import Layout from "../Layout/index";
 export default function Home() {
   return (
     <div>
+      <Header />
       <Layout>
         {/* コンテナーの役割 */}
         <PageContainer>
           <div
             className={clsx(
               ["flex", "flex-col", "gap-y-4"],
-              ["text-white", "z-index-10"]
+              "text-white",
+              "pb-[100px]"
             )}
           >
             {/* 見出し */}
