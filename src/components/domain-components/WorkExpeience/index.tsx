@@ -10,7 +10,7 @@ const WorkExpeience: React.FC = () => {
   const sideWorksList = Object.values(SIDE_WORKS);
 
   return (
-    <div className={"pb-8"}>
+    <div>
       {experienceList.map(({ NAME, DETAIL, DURING, SKILL, WEB_SITE }) => (
         <WorkCard
           key={NAME}

@@ -2,6 +2,8 @@ import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
 import clsx from "clsx";
 
+const headerHeight = 160;
+
 /**
  * @description ヘッダー
  * @todo もし共有したい記事が増えてきたら、notesページへのリンク先を追加する
@@ -9,17 +11,19 @@ import clsx from "clsx";
 const Header: React.FC = () => {
   return (
     <>
-      <div className={"h-[200px]"} />
+      <div className={clsx(`h-[${headerHeight}px]`)} />
       <div
         className={clsx(
           ["flex", "justify-center"],
-          ["fixed", "w-full", "top-0"]
+          ["fixed", "w-full", "top-0"],
+          ["bg-[#26262600]", "backdrop-blur"],
+          "z-10"
         )}
       >
         <div
           className={clsx(
             ["flex", "justify-between", "items-center"],
-            ["h-[200px]", "w-[720px]"]
+            [`h-[${headerHeight}px]`, "w-[720px]"]
           )}
         >
           <LogoIcon href="/" src="/svg/Logo.svg" />
