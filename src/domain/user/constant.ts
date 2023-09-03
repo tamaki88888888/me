@@ -22,9 +22,11 @@ export const EXPERIENCES = {
     DETAIL: [
       `中長規模のフロントエンド設計、開発を担当し、Figma React Next TypeScript などを用いて実装しました。`,
       `自社サービスのフロントエンド保守を担当しました。`,
+      `next -> 小規模開発にてライブラリの選定〜実装までを担当いたしました。 `,
     ],
-    SKILL: "React Recoil Next TS Perl",
+    SKILL: ["React", "Recoil", "Next", "TS", "Perl"],
   },
+
   PLACOLE: {
     NAME: "株式会社プラコレ",
     POSITION: "Frontend Engineer",
@@ -35,7 +37,7 @@ export const EXPERIENCES = {
       `自社メディアのSEO向上に向けた開発や運用保守を担当、Wordpressにおける amp の導入や、pageSpeed Insite などを用いた改善立案などを行いました。`,
       `中規模(1y)サービスのフロントエンド設計〜開発を担当し、主にReact Redux (ReactN) を用いて実装しました。`,
     ],
-    SKILL: "React Redux WordPrss JQuery AMP",
+    SKILL: ["React", "Redux", "WordPrss", "JQuery", "AMP"],
   },
 };
 
@@ -45,8 +47,8 @@ export const SIDE_WORKS = {
     POSITION: "Frontend Engineer",
     DURING: "2022",
     WEB_SITE: "https://akitsudoro.com/",
-    DETAIL: `秋津道路株式会社のコーポーレートサイト`,
-    SKILL: "WordPrss Sass",
+    DETAIL: [`秋津道路株式会社のコーポーレートサイト`],
+    SKILL: ["WordPrss", "Sass"],
   },
 };
 
@@ -61,6 +63,7 @@ export const PROJECTS: { [K in string]: Project } = {
     detail: `秋津道路株式会社のコーポーレートサイト`,
     skill: "WordPrss Sass",
   },
+
   PORTFOLIO: {
     shouldShow: true,
     name: "ko - introduce",
@@ -69,6 +72,7 @@ export const PROJECTS: { [K in string]: Project } = {
     detail: "自分の自己紹介サイトです。",
     skill: "TS React Next React-spring",
   },
+
   BLOG: {
     shouldShow: true,
     name: "blog",
@@ -78,4 +82,4 @@ export const PROJECTS: { [K in string]: Project } = {
       "開発ブログ。今までははてなブログをしようすることが多かったのですが、もっと詳細部分のデザインを変更したくなってしまい。。。自分用に開発いたしました。",
     skill: "TS React Next Netlify",
   },
-} as const;
+};
