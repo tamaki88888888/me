@@ -25,9 +25,6 @@ export default function Home() {
 
             {/* 詳細 */}
             <WorkExpeience />
-
-            {/* 次のページ */}
-            <a href="/works">what's next ? click ! →</a>
           </div>
         </PageContainer>
       </Layout>
