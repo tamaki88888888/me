@@ -26,11 +26,19 @@ const WorkCard: React.FC<Props> = ({
     <Card>
       <ExperienceRowContainer>
         <div>{during}</div>
-        <div>
-          <a href={href}>{title}</a>
-          {detailList.map((detail) => (
-            <p key={detail}>{detail}</p>
-          ))}
+        <div className={clsx(["flex", "flex-col", "gap-y-2"])}>
+          <div>
+            <a href={href}>{title}</a>
+          </div>
+          <div>
+            <ul>
+              {detailList.map((detail) => (
+                <li key={detail}>
+                  <p>{detail}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className={clsx(["flex", "gap-4"])}>
             {skillList.map((item) => (
               <Tag key={item} name={item} />
