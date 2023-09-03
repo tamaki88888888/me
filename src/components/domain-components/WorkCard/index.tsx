@@ -29,11 +29,11 @@ const WorkCard: React.FC<Props> = ({
         <div>
           <a href={href}>{title}</a>
           {detailList.map((detail) => (
-            <p>{detail}</p>
+            <p key={detail}>{detail}</p>
           ))}
           <div className={clsx(["flex", "gap-4"])}>
             {skillList.map((item) => (
-              <Tag name={item} />
+              <Tag key={item} name={item} />
             ))}
           </div>
         </div>
