@@ -2,12 +2,11 @@ import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
 import clsx from "clsx";
 
-interface Props {}
 /**
  * @description ヘッダー
  * @todo もし共有したい記事が増えてきたら、notesページへのリンク先を追加する
  */
-const Header: React.FC<Props> = () => {
+const Header: React.FC = () => {
   return (
     <>
       <div className={"h-[200px]"} />

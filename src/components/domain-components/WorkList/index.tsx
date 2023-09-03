@@ -3,12 +3,11 @@ import clsx from "clsx";
 import React from "react";
 import WorkCard from "./WorkCard";
 
-interface Props {}
 /**
  * @memo Worksページにて、個人開発内容(仕事内容)を表示するコンポーネント
  * @memo 書いてて、workと個人開発が曖昧になってる気がする。workをprojectに差し替え
  */
-const WorkList: React.FC<Props> = () => {
+const WorkList: React.FC = () => {
   const projectList = Object.values(PROJECTS);
 
   return (

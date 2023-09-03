@@ -2,12 +2,10 @@ import React from "react";
 import clsx from "clsx";
 import SnsIconGloup from "../SnsIconGloup";
 
-interface Props {}
 /**
- * @description ヘッダー
- * @todo もし共有したい記事が増えてきたら、notesページへのリンク先を追加する
+ * @description フッター
  */
-const Footer: React.FC<Props> = () => {
+const Footer: React.FC = () => {
   return (
     <>
       <div

@@ -7,7 +7,8 @@ import Layout from "../Layout/index";
 
 /**
  * @description ABOUTページ
- * @todo clsxの解消 - できたのですが、ちゃんと理解できてないため、後学じっし
+ * @todo clsxの解消 - できたのですが、ちゃんと理解できてないため、後学実施
+ * @todo border周りのtailwindジェネレーター作成したい
  */
 export default function Home() {
   return (

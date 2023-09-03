@@ -1,11 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 
-interface Props {}
 /**
  * @description 背景UIを表現するコンポーネント
  */
-const Background: React.FC<Props> = () => {
+const Background: React.FC = () => {
   return (
     <div>
       <div
