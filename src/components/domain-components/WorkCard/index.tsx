@@ -1,4 +1,6 @@
 import Card from "@/components/ui-components/Card";
+import Tag from "@/components/ui-components/Tag";
+import clsx from "clsx";
 import React from "react";
 import ExperienceRowContainer from "../WorkExpeience/ExperienceRowContainer";
 
@@ -29,9 +31,11 @@ const WorkCard: React.FC<Props> = ({
           {detailList.map((detail) => (
             <p>{detail}</p>
           ))}
-          {skillList.map((item) => (
-            <p>item</p>
-          ))}
+          <div className={clsx(["flex", "gap-4"])}>
+            {skillList.map((item) => (
+              <Tag name={item} />
+            ))}
+          </div>
         </div>
       </ExperienceRowContainer>
     </Card>
