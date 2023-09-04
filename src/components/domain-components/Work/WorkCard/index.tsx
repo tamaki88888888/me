@@ -24,21 +24,29 @@ const WorkCard: React.FC<Props> = ({
       <WorkRowContainer>
         {/* 左 */}
         <div>
-          <Image src={thumbnail} width={300} height={300} alt={name} />
+          <Image
+            className={clsx("h-[160px]", "object-cover")}
+            src={thumbnail}
+            width={300}
+            height={300}
+            alt={name}
+          />
         </div>
 
         {/* 右 */}
         <div>
-          <div>{during}</div>
           <div className={clsx(["flex", "flex-col", "gap-y-2"])}>
             <div>
               <a href={href}>{name}</a>
+              {/* <span className={"opacity-5"}>{during}</span> */}
             </div>
             <div>
-              <ul>
+              <ul className={"min-h-[70px]"}>
                 {detailList.map((detail) => (
                   <li key={detail}>
-                    <p>{detail}</p>
+                    <p className={clsx("text-[#8c8c8c]", "text-sm")}>
+                      {detail}
+                    </p>
                   </li>
                 ))}
               </ul>

@@ -11,4 +11,5 @@ export interface Project {
   href: string;
   detailList: Array<string>;
   skillList: Array<string>;
+  referenceLinks?: Array<{ text: string; url: string }>;
 }

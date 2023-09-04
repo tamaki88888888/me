@@ -55,33 +55,41 @@ export const SIDE_WORKS = {
 export const NOTES = {};
 
 export const PROJECTS: { [K in string]: Project } = {
-  AKITSU: {
-    shouldShow: true,
-    during: "2022",
-    name: "秋津道路株式会社コーポレートサイト",
-    thumbnail: "/image/thumbnail1.png",
-    href: "https://akitsudoro.com/",
-    detailList: [`秋津道路株式会社のコーポーレートサイト`],
-    skillList: ["WordPrss", "Sass"],
-  },
   PORTFOLIO: {
-    during: "2023",
+    during: "2023.8",
     shouldShow: true,
-    name: "ko - introduce",
+    name: "ko-introduce-myself-site",
     thumbnail: "/image/thumbnail1.png",
-    href: "",
-    detailList: ["自分の自己紹介サイトです。"],
+    href: "https://me-azure-xi.vercel.app/",
+    detailList: ["自己紹介サイトです。次はフォント周りを更新する予定。"],
     skillList: ["TS", "React", "Next", "React-spring"],
   },
   BLOG: {
-    during: "2022",
+    during: "2023.2",
     shouldShow: true,
     name: "blog",
     thumbnail: "/image/thumbnail1.png",
     href: "https://developer-blog-xi.vercel.app/",
     detailList: [
-      "開発ブログ。今までははてなブログをしようすることが多かったのですが、もっと詳細部分のデザインを変更したくなってしまい。。。自分用に開発いたしました。",
+      "ブログサービスからより細かくカスタマイズできる環境へ移行したく、HeadlessCMSを活用したブログを作成しました。",
     ],
     skillList: ["TS", "React", "Next", "Netlify"],
+    referenceLinks: [
+      {
+        text: "以前使用してたブログ(約100記事)",
+        url: "https://okinawanpizza.hatenablog.com/",
+      },
+    ],
+  },
+  AKITSU: {
+    shouldShow: true,
+    during: "2022.8",
+    name: "秋津道路株式会社様コーポレートサイト",
+    thumbnail: "/image/akitsudoro.png",
+    href: "https://akitsudoro.com/",
+    detailList: [
+      "一社目のサイト制作での経験を活かし初めての受託開発。コーポーレートサイトをWordPressをなどを用いて制作しました。",
+    ],
+    skillList: ["WordPrss", "Scss"],
   },
 };
