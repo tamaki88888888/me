@@ -2,7 +2,8 @@ import LogoIcon from "@/components/ui-components/LogoIcon/index";
 import React from "react";
 import clsx from "clsx";
 
-const headerHeight = 160;
+const HEADER_H = 160;
+const classHeaderHeight = "h-[" + HEADER_H + "px]";
 
 /**
  * @description ヘッダー
@@ -11,7 +12,7 @@ const headerHeight = 160;
 const Header: React.FC = () => {
   return (
     <>
-      <div className={clsx(`h-[${headerHeight}px]`)} />
+      <div className={clsx(classHeaderHeight)} />
       <div
         className={clsx(
           ["flex", "justify-center"],
@@ -23,7 +24,7 @@ const Header: React.FC = () => {
         <div
           className={clsx(
             ["flex", "justify-between", "items-center"],
-            [`h-[${headerHeight}px]`, "w-[720px]"]
+            [classHeaderHeight, "w-[720px]"]
           )}
         >
           <LogoIcon href="/" src="/svg/Logo.svg" />
