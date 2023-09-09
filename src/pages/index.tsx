@@ -66,7 +66,10 @@ export default function Home() {
                 <a href="/work" className={"hover:underline"}>
                   work
                 </a>
-                <a href="/resume" className={"hover:underline"}>
+                <a
+                  href="https://tamaki88888888.github.io/docs/resume.pdf"
+                  className={"hover:underline"}
+                >
                   resume
                 </a>
               </div>

@@ -33,7 +33,11 @@ const Header: React.FC = () => {
             <a href="/about">About</a>
             <a href="/experience">Experience</a>
             <a href="/work">Work</a>
-            <a href="/#" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://tamaki88888888.github.io/docs/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </a>
           </div>
