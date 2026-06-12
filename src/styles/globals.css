@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -95,7 +93,6 @@ body {
 @layer components {
   .blinking-cursor:after {
     content: "_";
-    /* @apply text-secondary-300; */
     animation: blink 1s step-start infinite;
   }
 

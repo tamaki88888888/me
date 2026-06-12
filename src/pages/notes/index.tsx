@@ -3,16 +3,24 @@ import Header from "@/components/domain-components/Header";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
+import { getAllNotes } from "@/lib/notes";
+import { NoteMeta } from "@/types/note";
+import { GetStaticProps } from "next";
 
-/**
- * @description NOTESページ
- */
-export default function Home() {
+type Props = {
+  notes: NoteMeta[];
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const notes = getAllNotes();
+  return { props: { notes } };
+};
+
+export default function NotesPage({ notes }: Props) {
   return (
     <div>
       <Header />
       <Layout>
-        {/* コンテナーの役割 */}
         <PageContainer>
           <div
             className={clsx(
@@ -21,13 +29,8 @@ export default function Home() {
               "pb-[100px]"
             )}
           >
-            {/* 見出し */}
             <h2 className={clsx(["text-3xl"])}>Notes</h2>
-
-            {/* 詳細 */}
-            <NoteList />
-
-            {/* 次のページ */}
+            <NoteList notes={notes} />
             <a href="/works">what's next ? click ! →</a>
           </div>
         </PageContainer>
