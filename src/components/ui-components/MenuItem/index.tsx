@@ -6,31 +6,60 @@ type Props = {
   index: number;
   color: string;
   label: string;
+  href?: string;
   iconName: React.ComponentProps<typeof IonIcon>["name"];
   isClicked: boolean;
+  activePage: string | null;
+  onPageSelect: (label: string) => void;
 };
 
-const MenuItem: React.FC<Props> = ({ iconName, index, color, isClicked }) => {
+const MenuItem: React.FC<Props> = ({
+  iconName,
+  index,
+  color,
+  isClicked,
+  href = "#",
+  label,
+  activePage,
+  onPageSelect,
+}) => {
   const rotation = (360 / 8) * index;
+  const isActive = activePage === label;
+  const otherActive = activePage !== null && !isActive;
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (label === "Blog") {
+      e.preventDefault();
+      onPageSelect(label);
+      return;
+    }
+  };
+
   return (
     <li
-      className={clsx(
-        "absolute",
-        "left-0",
-        "list-none",
-        "transition",
-        "translate-x-[100px]",
-        "duration-500",
-        `delay-${index * 100}`
-      )}
+      className={clsx("absolute", "list-none", "transition-all")}
       style={{
-        transform: isClicked
+        top: "50%",
+        left: "50%",
+        marginLeft: "-30px",
+        marginTop: "-30px",
+        transform: isActive
+          ? "translateY(calc(-50vh + 80px))"
+          : isClicked
           ? `rotate(${rotation}deg) translateX(100px)`
-          : "rotate(0deg) translateX(100px)", // tailwindのrotateが正しく解釈されないのはどうして？
+          : "rotate(0deg) translateX(100px)",
+        opacity: isActive ? 1 : otherActive ? 0 : isClicked ? 1 : 0,
+        zIndex: isActive ? 200 : undefined,
+        transitionDuration: isActive || otherActive ? "500ms" : "500ms",
+        transitionDelay:
+          isActive || otherActive ? "0ms" : `${index * 100}ms`,
       }}
     >
       <a
-        href="#"
+        href={href}
+        target={label !== "Blog" ? "_blank" : undefined}
+        rel="noopener noreferrer"
+        onClick={handleClick}
         className={clsx(
           "flex",
           "items-center",
@@ -39,15 +68,12 @@ const MenuItem: React.FC<Props> = ({ iconName, index, color, isClicked }) => {
           "h-[60px]",
           "no-underline",
           "text-[22px]",
-          "border-[50%]",
-          "transition",
-          "transition-[1s]",
-          !isClicked ? "color-[transparent]" : `color-[${color}]`,
-          "transition-delay-[0.5s]",
+          "rounded-full",
+          "cursor-pointer",
           "text-[white]"
         )}
         style={{
-          transform: `rotate(${rotation * -1}deg)`,
+          transform: isActive ? "none" : `rotate(${rotation * -1}deg)`,
           filter: `drop-shadow(0 0 5px ${color})`,
         }}
       >
@@ -58,5 +84,3 @@ const MenuItem: React.FC<Props> = ({ iconName, index, color, isClicked }) => {
 };
 
 export default MenuItem;
-
-// filter: drop-shadow(0 0 2px var(--clr));

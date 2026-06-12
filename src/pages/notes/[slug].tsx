@@ -1,4 +1,3 @@
-import Header from "@/components/domain-components/Header";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import Layout from "../Layout/index";
 import { getAllNotes, getNoteBySlug } from "@/lib/notes";
@@ -26,7 +25,6 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 export default function NotePage({ note }: Props) {
   return (
     <div>
-      <Header />
       <Layout>
         <PageContainer>
           <div className={clsx("flex", "flex-col", "gap-y-6", "text-white", "pb-[100px]")}>

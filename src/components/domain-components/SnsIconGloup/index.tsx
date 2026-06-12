@@ -7,15 +7,7 @@ interface Props {
   flexDirection?: "column" | "row";
 }
 
-const SNS_ICON_PROP_LIST: Array<React.ComponentProps<typeof SnsIcon>> = [
-  { href: SNS.GITHUB.URL, src: "/svg/github-icon.svg" },
-  {
-    href: SNS.INSTAGRAM.URL,
-    src: "/svg/instagram-icon.svg",
-  },
-  { href: SNS.X.URL, src: "/svg/twitter-icon.svg" },
-  { href: SNS.MY_BLOG.URL, src: "/svg/clip-icon.svg" },
-];
+const SNS_ICON_PROP_LIST: Array<React.ComponentProps<typeof SnsIcon>> = [];
 
 /**
  * @memo SNSICONのリストを表示するためのコンポーネント

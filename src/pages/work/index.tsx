@@ -1,4 +1,3 @@
-import Header from "@/components/domain-components/Header";
 import Work from "@/components/domain-components/Work";
 import PageContainer from "@/components/ui-components/PageContainer";
 import clsx from "clsx";
@@ -7,7 +6,6 @@ import Layout from "../Layout/index";
 export default function Home() {
   return (
     <div>
-      <Header />
       <Layout>
         {/* コンテナーの役割 */}
         <PageContainer>

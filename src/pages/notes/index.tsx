@@ -1,5 +1,4 @@
 import NoteList from "@/components/domain-components/NoteList";
-import Header from "@/components/domain-components/Header";
 import PageContainer from "@/components/ui-components/PageContainer/index";
 import { clsx } from "clsx";
 import Layout from "../Layout/index";
@@ -19,7 +18,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 export default function NotesPage({ notes }: Props) {
   return (
     <div>
-      <Header />
       <Layout>
         <PageContainer>
           <div

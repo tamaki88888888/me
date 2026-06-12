@@ -1,4 +1,3 @@
-import Header from "@/components/domain-components/Header/index";
 import Background from "@/components/ui-components/Background/index";
 
 interface Props {
