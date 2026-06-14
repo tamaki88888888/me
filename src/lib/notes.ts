@@ -36,6 +36,7 @@ export function getNoteBySlug(slug: string): Note {
     title: data.title ?? slug,
     date: data.date ?? "",
     description: data.description,
+    published: data.published ?? false,
     content: marked(content) as string,
   };
 }
