@@ -36,10 +36,28 @@ export default function Home({ notes = [] }: Props) {
   const [showContent, setShowContent] = useState(false);
   const [selectedNote, setSelectedNote] = useState<Note | null>(null);
   const [showDetail, setShowDetail] = useState(false);
+  const [isReturning, setIsReturning] = useState(false);
 
   const handlePageSelect = (label: string) => {
     setActivePage(label);
     setTimeout(() => setShowContent(true), 700);
+  };
+
+  const handleBackToMenu = () => {
+    setShowContent(false);
+    setShowDetail(false);
+    setSelectedNote(null);
+    setIsReturning(true); // アクティブアイコンをその場でフェードアウト
+
+    setTimeout(() => {
+      setActivePage(null); // invisible な状態で closed 位置にテレポート
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setIsReturning(false); // transition を再有効化
+          setTimeout(() => setIsClicked(true), 50); // メニューを開く
+        });
+      });
+    }, 350);
   };
 
   const handleNoteClick = (e: React.MouseEvent, note: Note) => {
@@ -110,7 +128,9 @@ export default function Home({ notes = [] }: Props) {
                 iconName={item.iconName}
                 href={item.href}
                 activePage={activePage}
+                isReturning={isReturning}
                 onPageSelect={handlePageSelect}
+                onBack={handleBackToMenu}
               />
             ))}
           </ul>

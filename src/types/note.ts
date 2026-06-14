@@ -3,6 +3,7 @@ export type NoteMeta = {
   title: string;
   date: string;
   description?: string;
+  published: boolean;
 };
 
 export type Note = NoteMeta & {

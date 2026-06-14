@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { marked } from "marked";
 import { Note, NoteMeta } from "@/types/note";
 
-const notesDir = path.join(process.cwd(), "../data/notes");
+const notesDir = path.join(process.cwd(), "data/notes");
 
 export function getAllNotes(): NoteMeta[] {
   if (!fs.existsSync(notesDir)) return [];
@@ -21,8 +21,10 @@ export function getAllNotes(): NoteMeta[] {
         title: data.title ?? slug,
         date: data.date ?? "",
         description: data.description,
+        published: data.published ?? false,
       };
     })
+    .filter((n) => n.published)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
