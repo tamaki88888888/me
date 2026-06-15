@@ -2,11 +2,12 @@ import Footer from "@/components/domain-components/Footer";
 import IonIcon from "@reacticons/ionicons";
 import clsx from "clsx";
 import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { useState } from "react";
 import Layout from "./Layout/index";
 import MenuItem from "@/components/ui-components/MenuItem";
-import { getAllNotes, getNoteBySlug } from "@/lib/notes";
-import { Note } from "@/types/note";
+import { getAllNotes } from "@/lib/notes";
+import { NoteMeta } from "@/types/note";
 
 export type MenuItemType = {
   color: string;
@@ -27,53 +28,47 @@ const menuItems: MenuItemType[] = [
 ];
 
 type Props = {
-  notes: Note[];
+  notes: NoteMeta[];
 };
 
 export default function Home({ notes = [] }: Props) {
+  const router = useRouter();
   const [isClicked, setIsClicked] = useState(false);
   const [activePage, setActivePage] = useState<string | null>(null);
   const [showContent, setShowContent] = useState(false);
-  const [selectedNote, setSelectedNote] = useState<Note | null>(null);
-  const [showDetail, setShowDetail] = useState(false);
   const [isReturning, setIsReturning] = useState(false);
 
   const handlePageSelect = (label: string) => {
     setActivePage(label);
-    setTimeout(() => setShowContent(true), 700);
+    setTimeout(() => {
+      setShowContent(true);
+      if (label === "Blog") {
+        window.history.pushState({}, "", "/notes");
+      }
+    }, 700);
   };
 
   const handleBackToMenu = () => {
     setShowContent(false);
-    setShowDetail(false);
-    setSelectedNote(null);
-    setIsReturning(true); // アクティブアイコンをその場でフェードアウト
+    setIsReturning(true);
+    window.history.pushState({}, "", "/");
 
     setTimeout(() => {
-      setActivePage(null); // invisible な状態で closed 位置にテレポート
+      setActivePage(null);
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          setIsReturning(false); // transition を再有効化
-          setTimeout(() => setIsClicked(true), 50); // メニューを開く
+          setIsReturning(false);
+          setTimeout(() => setIsClicked(true), 50);
         });
       });
     }, 350);
   };
 
-  const handleNoteClick = (e: React.MouseEvent, note: Note) => {
+  const handleNoteClick = (e: React.MouseEvent, slug: string) => {
     e.preventDefault();
     setShowContent(false);
     setTimeout(() => {
-      setSelectedNote(note);
-      setTimeout(() => setShowDetail(true), 50);
-    }, 300);
-  };
-
-  const handleBack = () => {
-    setShowDetail(false);
-    setTimeout(() => {
-      setSelectedNote(null);
-      setTimeout(() => setShowContent(true), 50);
+      router.push(`/notes/${slug}`);
     }, 300);
   };
 
@@ -144,52 +139,25 @@ export default function Home({ notes = [] }: Props) {
                 overflowY: "auto",
               }}
             >
-              {/* 記事一覧 */}
-              {!selectedNote && (
-                <div
-                  className="flex flex-col gap-4 transition-all duration-300"
-                  style={{
-                    opacity: showContent ? 1 : 0,
-                    transform: showContent ? "translateY(0)" : "translateY(12px)",
-                  }}
-                >
-                  {notes.map((note) => (
-                    <a
-                      key={note.slug}
-                      href={`/notes/${note.slug}`}
-                      onClick={(e) => handleNoteClick(e, note)}
-                      className="flex justify-between items-center py-3 border-b border-white/20 text-white no-underline hover:opacity-70 transition-opacity cursor-pointer"
-                    >
-                      <span className="text-sm">{note.title}</span>
-                      <span className="text-xs text-white/50">{note.date}</span>
-                    </a>
-                  ))}
-                </div>
-              )}
-
-              {/* 記事詳細 */}
-              {selectedNote && (
-                <div
-                  className="flex flex-col gap-6 transition-all duration-300 text-white"
-                  style={{
-                    opacity: showDetail ? 1 : 0,
-                    transform: showDetail ? "translateY(0)" : "translateY(12px)",
-                  }}
-                >
-                  <button
-                    onClick={handleBack}
-                    className="text-sm text-white/50 hover:text-white text-left transition-colors cursor-pointer bg-transparent border-none"
+              <div
+                className="flex flex-col gap-4 transition-all duration-300"
+                style={{
+                  opacity: showContent ? 1 : 0,
+                  transform: showContent ? "translateY(0)" : "translateY(12px)",
+                }}
+              >
+                {notes.map((note) => (
+                  <a
+                    key={note.slug}
+                    href={`/notes/${note.slug}`}
+                    onClick={(e) => handleNoteClick(e, note.slug)}
+                    className="flex justify-between items-center py-3 border-b border-white/20 text-white no-underline hover:opacity-70 transition-opacity cursor-pointer"
                   >
-                    ← back
-                  </button>
-                  <p className="text-xs text-white/50">{selectedNote.date}</p>
-                  <h1 className="text-2xl">{selectedNote.title}</h1>
-                  <div
-                    className="prose prose-invert max-w-none text-sm leading-relaxed"
-                    dangerouslySetInnerHTML={{ __html: selectedNote.content }}
-                  />
-                </div>
-              )}
+                    <span className="text-sm">{note.title}</span>
+                    <span className="text-xs text-white/50">{note.date}</span>
+                  </a>
+                ))}
+              </div>
             </div>
           )}
         </div>
@@ -199,6 +167,6 @@ export default function Home({ notes = [] }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const notes = getAllNotes().map((n) => getNoteBySlug(n.slug));
+  const notes = getAllNotes();
   return { props: { notes } };
 };

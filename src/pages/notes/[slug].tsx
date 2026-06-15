@@ -3,6 +3,7 @@ import Layout from "../Layout/index";
 import { getAllNotes, getNoteBySlug } from "@/lib/notes";
 import { Note } from "@/types/note";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
 import { clsx } from "clsx";
 
 type Props = {
@@ -23,12 +24,13 @@ export const getStaticProps: GetStaticProps<Props> = async ({ params }) => {
 };
 
 export default function NotePage({ note }: Props) {
+  const router = useRouter();
   return (
     <div>
       <Layout>
         <PageContainer>
           <div className={clsx("flex", "flex-col", "gap-y-6", "text-white", "pb-[100px]")}>
-            <a href="/notes" className="text-sm text-gray-400 hover:underline">← Notes</a>
+            <button onClick={() => router.back()} className="text-sm text-gray-400 hover:underline text-left bg-transparent border-none cursor-pointer">← Notes</button>
             <p className="text-sm text-gray-400">{note.date}</p>
             <h1 className="text-3xl">{note.title}</h1>
             <div

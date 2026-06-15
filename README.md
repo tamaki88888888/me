@@ -1,38 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# me
 
-## Getting Started
+個人サイト。ラジアルメニューの SPA + ノート機能。
 
-First, run the development server:
+## ディレクトリ構成
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+~/life/me/
+├── app/              ← このリポジトリ（Next.js プロジェクト）
+│   ├── src/          ← ソースコード
+│   ├── data/notes/   ← 記事 Markdown ファイル
+│   ├── public/notes/ ← 記事内の画像
+│   └── docs/adr/     ← 設計記録
+├── data/
+│   └── notes → app/data/notes  ← symlink（どちらからでも編集可）
+└── resume/           ← 別プロジェクト（レジュメ生成）
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 開発
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+cd ~/life/me/app
+npm run dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 記事を書く
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`data/notes/` に Markdown ファイルを作成する（`~/life/me/data/notes/` も symlink で同じ場所）。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```yaml
+---
+title: タイトル
+date: "2026-01-01"
+description: 説明文
+published: true   # false だと非公開
+---
+```
 
-## Learn More
+画像は `public/notes/` に置いて `/notes/filename.png` で参照する。
 
-To learn more about Next.js, take a look at the following resources:
+## デプロイ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+`main` ブランチへの push で Vercel が自動デプロイ。
